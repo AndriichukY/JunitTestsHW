@@ -1,10 +1,6 @@
 package org.hw13.HW14;
 
-import org.junit.Test;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +12,8 @@ public class HW14FirstVariantTest {
 
     @BeforeAll
     public static void init() {
-        chromeDriver = new ChromeDriver();
+       //chromeDriver = new ChromeDriver();
+       chromeDriver = new ChromeDriver();
     }
 
     @BeforeEach
@@ -24,12 +21,12 @@ public class HW14FirstVariantTest {
         chromeDriver.get("https://the-internet.herokuapp.com/login");
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void verifyLogin() {
         enterUserName("tomsmith");
         enterUserPassword("SuperSecretPassword!");
         clickLoginButton();
-        WebElement loginSuccess = chromeDriver.findElement(By.id("//div[contains(text(), \" You logged into a secure area!\")]"));
+        WebElement loginSuccess = chromeDriver.findElement(By.xpath("//div[contains(text(), \" You logged into a secure area!\")]"));
         Assertions.assertTrue(loginSuccess.isDisplayed());
     }
 
@@ -38,7 +35,7 @@ public class HW14FirstVariantTest {
         enterUserName("test");
         enterUserPassword("test password");
         clickLoginButton();
-        WebElement loginFail = chromeDriver.findElement(By.id("//div[contains(text(), \"  Your username is invalid!\")]"));
+        WebElement loginFail = chromeDriver.findElement(By.xpath("//div[contains(text(), \"  Your username is invalid!\")]"));
         Assertions.assertTrue(loginFail.isDisplayed());
     }
 
