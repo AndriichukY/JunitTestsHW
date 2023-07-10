@@ -12,7 +12,6 @@ public class HW14FirstVariantTest {
 
     @BeforeAll
     public static void init() {
-       //chromeDriver = new ChromeDriver();
        chromeDriver = new ChromeDriver();
     }
 
