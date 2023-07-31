@@ -1,4 +1,4 @@
-package org.hw13.HW14;
+package org.hw.HW14;
 
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;

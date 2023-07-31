@@ -1,7 +1,4 @@
-package org.hw13;
-
-import org.hw13.User;
-import org.hw13.UserUtils;
+package org.hw;
 
 import java.util.ArrayList;
 import java.util.List;

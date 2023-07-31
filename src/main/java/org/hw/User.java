@@ -1,8 +1,4 @@
-package org.hw13;
-
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+package org.hw;
 
 public class User {
     private String firstName;
